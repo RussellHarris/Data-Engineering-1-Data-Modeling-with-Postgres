@@ -4,12 +4,12 @@ A startup called Sparkify wants to analyze the data they've been collecting on s
 They'd like a data engineer to create a Postgres database with tables designed to optimize queries on song play analysis, and bring you on the project. Your role is to create a database schema and ETL pipeline for this analysis. You'll be able to test your database and ETL pipeline by running queries given to you by the analytics team from Sparkify and compare your results with their expected results.
 
 # FILES
-* test.ipynb displays the first few rows of each table to let you check your database.
-* create_tables.py drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
-* etl.ipynb reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
-* etl.py reads and processes files from song_data and log_data and loads them into your tables. You can fill this out based on your work in the ETL notebook.
-* sql_queries.py contains all your sql queries, and is imported into the last three files above.
-* read_data.ipynb displays the first few lines of song and log data for visual inspection.
+* **test.ipynb** - displays the first few rows of each table to let you check your database.
+* **create_tables.py** - drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
+* **etl.ipynb** - reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
+* **etl.py** - reads and processes files from song_data and log_data and loads them into your tables. You can fill this out based on your work in the ETL notebook.
+* **sql_queries.py** - contains all your sql queries, and is imported into the last three files above.
+* **read_data.ipynb** - displays the first few lines of song and log data for visual inspection.
 
 # DESIGN Schema (songplays is the "center" of the star schema)
 * **songplays** - (songplay_id serial PRIMARY KEY, start_time timestamp references time(start_time), user_id int references users(user_id), level text, song_id text references songs(song_id), artist_id text references artists(artist_id), session_id int, location text, user_agent text)  
